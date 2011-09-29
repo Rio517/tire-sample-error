@@ -1,13 +1,7 @@
 class Article < ActiveRecord::Base
   belongs_to :author
   
-  include Tire::Model::Search
-  
-  after_save :update_counter_cache
-  
-  def update_counter_cache
-    self.author.update_attributes(:article_count => self.author.articles.count)  #if published?
-  end
+  include Tire::Model::Search  
   
   def update_tire_index
     self.tire.update_index #if self.published?
