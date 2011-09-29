@@ -3,7 +3,7 @@ class Article < ActiveRecord::Base
   
   include Tire::Model::Search
   
-  before_save :update_counter_cache
+  after_save :update_counter_cache
   
   def update_counter_cache
     self.author.update_attributes(:article_count => self.author.articles.count)  #if published?

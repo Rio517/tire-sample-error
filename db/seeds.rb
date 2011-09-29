@@ -20,3 +20,7 @@ end
 #make sure all is imported
 Article.index.import Article.all
 Author.index.import Author.all
+
+
+#get the error
+Article.first.update_tire_index
