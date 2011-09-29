@@ -1,0 +1,16 @@
+===  Console output
+
+
+>Article.first.update_tire_index
+  Article Load (1.1ms)  SELECT "articles".* FROM "articles" LIMIT 1
+NoMethodError: undefined method `_run_update_elasticsearch_index_callbacks' for #<Article:0xa8e218c>
+        from /home/rio/.gem/ruby/1.9.2/gems/activemodel-3.1.0/lib/active_model/attribute_methods.rb:385:in `method_missing'
+        from /home/rio/.gem/ruby/1.9.2/gems/activerecord-3.1.0/lib/active_record/attribute_methods.rb:60:in `method_missing'
+        from /home/rio/.gem/ruby/1.9.2/gems/tire-0.3.3/lib/tire/model/search.rb:127:in `update_index'
+        from /media/Data/Agency/Clients/Traceful/code/callback/app/models/article.rb:13:in `update_tire_index'
+        from (irb):11
+        from /home/rio/.gem/ruby/1.9.2/gems/railties-3.1.0/lib/rails/commands/console.rb:45:in `start'
+        from /home/rio/.gem/ruby/1.9.2/gems/railties-3.1.0/lib/rails/commands/console.rb:8:in `start'
+        from /home/rio/.gem/ruby/1.9.2/gems/railties-3.1.0/lib/rails/commands.rb:40:in `<top (required)>'
+        from script/rails:6:in `require'
+        from script/rails:6:in `<main>'
